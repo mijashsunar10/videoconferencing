@@ -19,4 +19,10 @@ Route::middleware(['auth'])->group(function () {
     Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
 });
 
+
+use App\Livewire\JitsiMeeting;
+
+Route::get('/meeting', JitsiMeeting::class);
+
+
 require __DIR__.'/auth.php';
